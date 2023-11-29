@@ -143,6 +143,7 @@ class Pivot(QWidget):
             return
 
         widget.setProperty('routeKey', routeKey)
+        widget.setObjectName(routeKey)
         widget.itemClicked.connect(self._onItemClicked)
         if onClick:
             widget.itemClicked.connect(onClick)
